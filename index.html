@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Glory Akosa-Obidike | ProEdge Advisory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0E0E0E;
+  --parchment: #F7F4EF;
+  --gold: #B8922A;
+  --gold-light: #D4AF6A;
+  --navy: #0F1E3C;
+  --navy-mid: #1A2F54;
+  --cream: #EDE8DF;
+  --warm-gray: #8A8276;
+  --rule: rgba(184,146,42,0.25);
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 4rem;
+  background: rgba(247,244,239,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rule);
+}
+.nav-logo { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; letter-spacing: 0.04em; color: var(--navy); }
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { font-size: 0.78rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warm-gray); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.6rem 1.4rem; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; transition: all 0.2s; }
+.nav-cta:hover { background: var(--gold); color: white; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  padding-top: 80px;
+}
+.hero-left {
+  background: var(--navy);
+  padding: 5rem 4rem 5rem 4rem;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.hero-left::before {
+  content: '';
+  position: absolute; top: -100px; left: -100px;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(184,146,42,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-left::after {
+  content: '';
+  position: absolute; bottom: 0; right: 0;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(184,146,42,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 1rem;
+}
+.hero-eyebrow::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--gold); }
+.hero-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-weight: 300; line-height: 1.05;
+  color: #F7F4EF; letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+.hero-name em { font-style: italic; color: var(--gold-light); }
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 1rem; font-weight: 400; font-style: italic;
+  color: rgba(247,244,239,0.5); letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+}
+.hero-rule { width: 3rem; height: 1px; background: var(--gold); margin-bottom: 1.5rem; }
+.hero-bio {
+  font-size: 0.9rem; line-height: 1.8; color: rgba(247,244,239,0.7);
+  max-width: 420px; margin-bottom: 2.5rem;
+}
+.hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+.hero-tag {
+  font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.35rem 0.8rem; border: 1px solid rgba(184,146,42,0.35);
+  color: var(--gold-light);
+}
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-gold {
+  font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.8rem 1.8rem; background: var(--gold); color: white;
+  text-decoration: none; transition: all 0.2s; border: none; cursor: pointer;
+}
+.btn-gold:hover { background: var(--gold-light); }
+.btn-outline-light {
+  font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.8rem 1.8rem; border: 1px solid rgba(247,244,239,0.3); color: rgba(247,244,239,0.7);
+  text-decoration: none; transition: all 0.2s;
+}
+.btn-outline-light:hover { border-color: rgba(247,244,239,0.7); color: #F7F4EF; }
+
+.hero-right {
+  background: var(--parchment);
+  padding: 5rem 4rem;
+  display: flex; flex-direction: column; justify-content: center;
+  border-left: 1px solid var(--rule);
+}
+.hero-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+.hero-stat { padding: 1.5rem; border: 1px solid var(--rule); position: relative; }
+.hero-stat::before { content: ''; position: absolute; top: 0; left: 0; width: 2rem; height: 2px; background: var(--gold); }
+.stat-num { font-family: var(--font-display); font-size: 2.8rem; font-weight: 300; color: var(--navy); line-height: 1; margin-bottom: 0.3rem; }
+.stat-label { font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--warm-gray); }
+.sector-list { margin-bottom: 2rem; }
+.sector-title { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+.sector-items { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.sector-item { font-size: 0.78rem; padding: 0.3rem 0.75rem; background: var(--cream); color: var(--navy-mid); }
+.hero-quote { font-family: var(--font-display); font-size: 1.15rem; font-style: italic; font-weight: 400; color: var(--navy); line-height: 1.6; padding-left: 1rem; border-left: 2px solid var(--gold); }
+
+/* ── SECTION SHARED ── */
+section { padding: 7rem 4rem; }
+.section-label { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.75rem; }
+.section-label::after { content: ''; flex: 0 0 2rem; height: 1px; background: var(--gold); }
+.section-heading { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; line-height: 1.1; color: var(--navy); margin-bottom: 1rem; }
+.section-heading em { font-style: italic; color: var(--gold); }
+.section-sub { font-size: 0.9rem; line-height: 1.8; color: var(--warm-gray); max-width: 520px; }
+
+/* ── ABOUT ── */
+#about { background: var(--cream); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.about-text p { font-size: 0.92rem; line-height: 1.9; color: #3A3632; margin-bottom: 1.25rem; }
+.about-text p:first-child::first-letter { font-family: var(--font-display); font-size: 3.5rem; font-weight: 300; color: var(--gold); float: left; line-height: 0.8; margin-right: 0.1em; margin-top: 0.1em; }
+.about-right { padding-top: 1rem; }
+.expertise-block { margin-bottom: 2rem; }
+.expertise-title { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+.expertise-items { list-style: none; }
+.expertise-items li { font-size: 0.85rem; padding: 0.6rem 0; border-bottom: 1px solid var(--rule); color: var(--navy); display: flex; align-items: center; gap: 0.75rem; }
+.expertise-items li::before { content: '›'; color: var(--gold); font-size: 1rem; }
+.faith-box { background: var(--navy); padding: 1.5rem; border-left: 2px solid var(--gold); }
+.faith-box p { font-family: var(--font-display); font-size: 1.05rem; font-style: italic; color: rgba(247,244,239,0.85); line-height: 1.7; }
+
+/* ── SYSTEMS ── */
+#systems { background: var(--navy); }
+#systems .section-heading { color: var(--parchment); }
+#systems .section-sub { color: rgba(247,244,239,0.55); }
+.systems-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 4rem; align-items: end; }
+.api-setup-card {
+  background: rgba(184,146,42,0.08); border: 1px solid rgba(184,146,42,0.2);
+  padding: 1.5rem;
+}
+.api-setup-title { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+.api-input-wrap { display: flex; gap: 0; margin-bottom: 0.75rem; }
+.api-input {
+  flex: 1; padding: 0.7rem 1rem; font-size: 0.8rem; font-family: var(--font-mono);
+  background: rgba(15,30,60,0.6); border: 1px solid rgba(184,146,42,0.3);
+  border-right: none; color: var(--parchment); outline: none;
+}
+.api-input::placeholder { color: rgba(247,244,239,0.3); }
+.api-btn {
+  padding: 0.7rem 1.2rem; background: var(--gold); border: none;
+  color: white; font-size: 0.75rem; font-family: var(--font-mono);
+  letter-spacing: 0.05em; cursor: pointer; white-space: nowrap;
+}
+.api-status { font-size: 0.75rem; font-family: var(--font-mono); color: rgba(247,244,239,0.4); }
+.api-status.connected { color: #7BC67A; }
+.systems-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+.system-card {
+  border: 1px solid rgba(184,146,42,0.15);
+  background: rgba(247,244,239,0.03);
+  padding: 2rem; position: relative; overflow: hidden;
+  transition: all 0.3s; cursor: pointer;
+}
+.system-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+.system-card:hover { background: rgba(184,146,42,0.06); border-color: rgba(184,146,42,0.35); transform: translateY(-3px); }
+.sys-num { font-family: var(--font-mono); font-size: 0.65rem; color: rgba(184,146,42,0.5); letter-spacing: 0.1em; margin-bottom: 1rem; }
+.sys-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+.sys-name { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; color: var(--parchment); line-height: 1.2; margin-bottom: 0.75rem; }
+.sys-desc { font-size: 0.8rem; line-height: 1.7; color: rgba(247,244,239,0.5); margin-bottom: 1.5rem; }
+.sys-features { list-style: none; }
+.sys-features li { font-size: 0.75rem; color: rgba(247,244,239,0.6); padding: 0.35rem 0; border-bottom: 1px solid rgba(184,146,42,0.08); display: flex; align-items: center; gap: 0.5rem; }
+.sys-features li::before { content: '·'; color: var(--gold); }
+.sys-launch-btn {
+  margin-top: 1.5rem; width: 100%; padding: 0.7rem; font-size: 0.72rem;
+  font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;
+  background: transparent; border: 1px solid rgba(184,146,42,0.3); color: var(--gold);
+  cursor: pointer; transition: all 0.2s;
+}
+.sys-launch-btn:hover { background: var(--gold); color: white; }
+.sys-launch-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* ── DEMO MODAL ── */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 1000;
+  background: rgba(10,15,25,0.92); backdrop-filter: blur(8px);
+  align-items: center; justify-content: center;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: var(--parchment); width: 90vw; max-width: 760px;
+  max-height: 88vh; overflow-y: auto; position: relative;
+}
+.modal-header {
+  background: var(--navy); padding: 1.25rem 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 2;
+}
+.modal-title { font-family: var(--font-display); font-size: 1.2rem; color: var(--parchment); font-weight: 400; }
+.modal-close { background: none; border: none; color: var(--gold); font-size: 1.3rem; cursor: pointer; padding: 0.2rem 0.5rem; }
+.modal-body { padding: 1.5rem; }
+
+/* System 1 styles inside modal */
+.m-field { margin-bottom: 12px; }
+.m-field label { font-size: 11px; color: var(--warm-gray); letter-spacing: 0.05em; text-transform: uppercase; display: block; margin-bottom: 4px; font-family: var(--font-mono); }
+.m-field input, .m-field select, .m-field textarea {
+  width: 100%; font-size: 13px; padding: 8px 10px;
+  border: 1px solid rgba(15,30,60,0.15); background: white;
+  color: var(--ink); font-family: var(--font-body); outline: none;
+}
+.m-field input:focus, .m-field select:focus, .m-field textarea:focus { border-color: var(--gold); }
+.m-field textarea { resize: vertical; min-height: 72px; }
+.m-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.m-check-group { display: flex; flex-wrap: wrap; gap: 6px; }
+.m-pill {
+  font-size: 11px; padding: 4px 10px; border: 1px solid rgba(15,30,60,0.2);
+  cursor: pointer; color: var(--warm-gray); user-select: none; transition: all 0.15s;
+}
+.m-pill.on { background: var(--navy); color: var(--gold-light); border-color: var(--navy); }
+.m-btn {
+  width: 100%; padding: 0.8rem; font-size: 0.75rem; font-family: var(--font-mono);
+  letter-spacing: 0.1em; text-transform: uppercase; border: none;
+  background: var(--navy); color: var(--parchment); cursor: pointer; transition: all 0.2s; margin-top: 1rem;
+}
+.m-btn:hover { background: var(--gold); }
+.m-btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 1rem; }
+.m-btn-secondary { background: transparent; border: 1px solid rgba(15,30,60,0.2); color: var(--ink); }
+.m-btn-secondary:hover { background: var(--cream); }
+.m-spinner-wrap { text-align: center; padding: 2.5rem; }
+.m-spinner { width: 32px; height: 32px; border: 2px solid rgba(15,30,60,0.1); border-top-color: var(--gold); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 1rem; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.m-load-msg { font-size: 12px; font-family: var(--font-mono); color: var(--warm-gray); }
+.m-section-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+.m-result-text { font-size: 13px; line-height: 1.7; color: var(--ink); }
+.m-result-list { padding-left: 1rem; }
+.m-result-list li { font-size: 13px; line-height: 1.7; color: var(--ink); margin-bottom: 3px; }
+.m-kpi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 1rem; }
+.m-kpi { background: var(--cream); padding: 10px; text-align: center; }
+.m-kpi-num { font-family: var(--font-display); font-size: 2rem; font-weight: 300; }
+.m-kpi-lbl { font-size: 10px; font-family: var(--font-mono); color: var(--warm-gray); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+.m-tag { display: inline-block; padding: 2px 10px; font-size: 11px; margin: 2px; }
+.m-tag-gold { background: rgba(184,146,42,0.12); color: var(--gold); }
+.m-tag-navy { background: rgba(15,30,60,0.08); color: var(--navy); }
+.m-tag-red { background: rgba(220,50,50,0.1); color: #A32D2D; }
+.m-tag-green { background: rgba(99,153,34,0.12); color: #3B6D11; }
+.m-tag-amber { background: rgba(186,117,23,0.12); color: #854F0B; }
+.m-divider { border: none; border-top: 1px solid rgba(15,30,60,0.08); margin: 1rem 0; }
+.m-result-box { border: 1px solid rgba(15,30,60,0.1); padding: 1.25rem; margin-bottom: 1rem; }
+.m-risk-banner { padding: 0.75rem 1rem; margin-bottom: 1rem; font-size: 12px; font-family: var(--font-mono); letter-spacing: 0.05em; border-left: 3px solid; }
+.m-risk-high { background: rgba(220,50,50,0.06); border-color: #A32D2D; color: #A32D2D; }
+.m-risk-medium { background: rgba(186,117,23,0.06); border-color: #854F0B; color: #854F0B; }
+.m-risk-low { background: rgba(99,153,34,0.06); border-color: #3B6D11; color: #3B6D11; }
+.m-tabs { display: flex; border-bottom: 1px solid rgba(15,30,60,0.12); margin-bottom: 1.25rem; }
+.m-tab { padding: 0.6rem 1rem; font-size: 12px; font-family: var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; border: none; background: none; cursor: pointer; color: var(--warm-gray); border-bottom: 2px solid transparent; transition: all 0.15s; }
+.m-tab.active { color: var(--navy); border-bottom-color: var(--gold); }
+
+/* ── CAPSTONE ── */
+#capstone { background: var(--cream); }
+.capstone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+.capstone-rule-list { list-style: none; }
+.capstone-rule { display: flex; gap: 1.25rem; padding: 1.25rem 0; border-bottom: 1px solid var(--rule); align-items: flex-start; }
+.rule-num { font-family: var(--font-display); font-size: 2rem; font-weight: 300; color: var(--gold); opacity: 0.5; line-height: 1; flex-shrink: 0; width: 2rem; }
+.rule-text strong { font-size: 0.82rem; font-weight: 500; color: var(--navy); display: block; margin-bottom: 0.2rem; letter-spacing: 0.02em; }
+.rule-text span { font-size: 0.78rem; color: var(--warm-gray); line-height: 1.5; }
+.tech-stack { margin-top: 0; }
+.tech-title { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.tech-item { display: flex; align-items: center; gap: 1rem; padding: 0.9rem; background: white; border: 1px solid var(--rule); margin-bottom: 0.5rem; }
+.tech-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+.tech-name { font-size: 0.82rem; font-weight: 500; color: var(--navy); }
+.tech-desc { font-size: 0.75rem; color: var(--warm-gray); margin-left: auto; }
+
+/* ── CONTACT ── */
+#contact { background: var(--navy); text-align: center; }
+#contact .section-heading { color: var(--parchment); margin-bottom: 0.5rem; }
+#contact .section-sub { color: rgba(247,244,239,0.5); margin: 0 auto 3rem; text-align: center; }
+.contact-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; max-width: 700px; margin: 0 auto 3rem; }
+.contact-item { padding: 1.5rem; border: 1px solid rgba(184,146,42,0.2); }
+.contact-item-label { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+.contact-item-val { font-size: 0.85rem; color: rgba(247,244,239,0.7); }
+.footer-rule { width: 3rem; height: 1px; background: var(--gold); margin: 3rem auto 1.5rem; }
+.footer-text { font-size: 0.75rem; color: rgba(247,244,239,0.3); letter-spacing: 0.05em; }
+
+/* ── ANIMATIONS ── */
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.fade-up.visible { opacity: 1; transform: none; }
+
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-left, .hero-right { padding: 3rem 1.5rem; }
+  .hero-stat-grid { grid-template-columns: 1fr 1fr; }
+  section { padding: 4rem 1.5rem; }
+  .about-grid, .capstone-grid, .systems-intro { grid-template-columns: 1fr; gap: 2rem; }
+  .systems-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Pro<span>Edge</span> Advisory</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#systems">AI Systems</a></li>
+    <li><a href="#capstone">Capstone</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#systems" class="nav-cta">View Systems</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">ProEdge Advisory · AI Automation Capstone 2026</div>
+    <h1 class="hero-name">Glory<br><em>Akosa-Obidike</em></h1>
+    <div class="hero-title">Corporate & Commercial Lawyer · Certified HR Specialist · AI Automation Builder</div>
+    <div class="hero-rule"></div>
+    <p class="hero-bio">For over a decade, I have worked at the intersection of law, business, and people — guiding startups, SMEs, NGOs, and corporations through complex regulatory environments. Today, I build AI-powered systems that bring legal precision and operational clarity together.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">Corporate Law</span>
+      <span class="hero-tag">Corporate Governance</span>
+      <span class="hero-tag">HR Systems</span>
+      <span class="hero-tag">AI Automation</span>
+      <span class="hero-tag">Legal Tech</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#systems" class="btn-gold">Explore AI Systems</a>
+      <a href="#about" class="btn-outline-light">My Story</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-stat-grid">
+      <div class="hero-stat">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">4</div>
+        <div class="stat-label">Sectors Served</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">3</div>
+        <div class="stat-label">AI Systems Built</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">∞</div>
+        <div class="stat-label">Impact Potential</div>
+      </div>
+    </div>
+    <div class="sector-list">
+      <div class="sector-title">Sector Experience</div>
+      <div class="sector-items">
+        <span class="sector-item">Oil & Gas</span>
+        <span class="sector-item">Telecommunications</span>
+        <span class="sector-item">Real Estate</span>
+        <span class="sector-item">Non-Profit</span>
+      </div>
+    </div>
+    <blockquote class="hero-quote">"I don't just ask, what does the law say? I ask, what actually works?"</blockquote>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="fade-up">
+    <div class="section-label">About</div>
+    <h2 class="section-heading">A builder at the<br><em>intersection</em> of law & technology</h2>
+  </div>
+  <div class="about-grid" style="margin-top:3rem;">
+    <div class="about-text fade-up">
+      <p>Glory Akosa-Obidike is a Corporate & Commercial Lawyer, Certified HR Specialist, and Business Advisor with multi-sector experience advising organizations on legal compliance, corporate governance, HR systems, and business structuring.</p>
+      <p>She has guided startups, SMEs, NGOs, and growing companies through complex regulatory environments, building the legal and operational foundations they need to scale with confidence. A modern, forward-thinking advisor, Glory leverages technology and automation to streamline business processes, strengthen governance, and improve operational efficiency.</p>
+      <p>She is the founder of ProEdge Advisory, where she helps individuals and businesses navigate legal and structural challenges with clarity and precision. She is also developing the Legal Ease Platform — a system designed to simplify legal processes and bring structure to how legal services are delivered.</p>
+      <p>Beyond her professional work, Glory is a woman of faith, a mother, and someone deeply committed to building systems, solutions, and a life of purpose and meaning.</p>
+    </div>
+    <div class="about-right fade-up">
+      <div class="expertise-block">
+        <div class="expertise-title">Areas of Expertise</div>
+        <ul class="expertise-items">
+          <li>Corporate & Commercial Law</li>
+          <li>Corporate Governance</li>
+          <li>HR Systems & Policy</li>
+          <li>Business Structuring</li>
+          <li>Contract Advisory</li>
+          <li>Regulatory Compliance</li>
+          <li>Process Automation</li>
+          <li>Operational Efficiency</li>
+        </ul>
+      </div>
+      <div class="faith-box">
+        <p>"I am guided by integrity, responsibility, and showing up fully — not just professionally, but personally. I care about clarity. I care about impact. And I care about doing things well."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEMS -->
+<section id="systems">
+  <div class="systems-intro">
+    <div class="fade-up">
+      <div class="section-label" style="color:var(--gold);">AI Systems</div>
+      <h2 class="section-heading">Three AI-Powered<br><em>Legal Intelligence</em><br>Systems</h2>
+      <p class="section-sub">Built as part of the 10Alytics AI Automation Capstone — March 2026 Cohort. Each system leverages Claude AI to deliver real legal intelligence for ProEdge Advisory clients.</p>
+    </div>
+    <div class="api-setup-card fade-up">
+      <div class="api-setup-title">⚡ Activate AI Systems</div>
+      <p style="font-size:0.78rem;color:rgba(247,244,239,0.5);margin-bottom:1rem;line-height:1.6;">Enter your Anthropic API key to run live AI demonstrations. Get yours free at <span style="color:var(--gold);">console.anthropic.com</span></p>
+      <div class="api-input-wrap">
+        <input class="api-input" type="password" id="globalApiKey" placeholder="sk-ant-api03-..." />
+        <button class="api-btn" onclick="saveApiKey()">Activate</button>
+      </div>
+      <div class="api-status" id="apiStatus">● Not connected — demo mode</div>
+    </div>
+  </div>
+
+  <div class="systems-grid">
+    <!-- System 1 -->
+    <div class="system-card fade-up" onclick="openModal('s1')">
+      <div class="sys-num">01 / 03</div>
+      <div class="sys-icon">🏛️</div>
+      <div class="sys-name">AI Compliance Intelligence System</div>
+      <div class="sys-desc">Enter any business details and receive a full AI-generated compliance audit — risk scores, governance recommendations, regulatory frameworks, and a 30-day action plan.</div>
+      <ul class="sys-features">
+        <li>Multi-area compliance audit</li>
+        <li>Risk scoring (0–100)</li>
+        <li>Governance recommendations</li>
+        <li>Regulatory framework mapping</li>
+        <li>30-day action plan</li>
+      </ul>
+      <button class="sys-launch-btn">Launch System →</button>
+    </div>
+    <!-- System 2 -->
+    <div class="system-card fade-up" onclick="openModal('s2')">
+      <div class="sys-num">02 / 03</div>
+      <div class="sys-icon">⚖️</div>
+      <div class="sys-name">Case Intake & Contract Intelligence Hub</div>
+      <div class="sys-desc">Three tools in one: AI client intake & case qualification, contract risk extraction & clause review, and automated legal brief generation.</div>
+      <ul class="sys-features">
+        <li>Client qualification & routing</li>
+        <li>Contract risk scoring</li>
+        <li>Red flag & gap detection</li>
+        <li>Legal brief auto-generation</li>
+        <li>Case strength assessment</li>
+      </ul>
+      <button class="sys-launch-btn">Launch System →</button>
+    </div>
+    <!-- System 3 -->
+    <div class="system-card fade-up" onclick="openModal('s3')">
+      <div class="sys-num">03 / 03</div>
+      <div class="sys-icon">🚀</div>
+      <div class="sys-name">ProEdge AI Command Center</div>
+      <div class="sys-desc">The flagship system. A full 5-module engagement pipeline: client onboarding → compliance audit → contract analysis → HR policy check → comprehensive advisory report.</div>
+      <ul class="sys-features">
+        <li>5-module engagement pipeline</li>
+        <li>HR policy gap analyser</li>
+        <li>Cross-module intelligence</li>
+        <li>Full advisory report generation</li>
+        <li>30 & 90-day roadmaps</li>
+      </ul>
+      <button class="sys-launch-btn">Launch System →</button>
+    </div>
+  </div>
+</section>
+
+<!-- CAPSTONE -->
+<section id="capstone">
+  <div class="fade-up">
+    <div class="section-label">Capstone Project</div>
+    <h2 class="section-heading">10Alytics AI Automation<br><em>Cohort March 2026</em></h2>
+    <p class="section-sub">This project was built as a capstone submission for the 10Alytics Business AI Automation programme — selecting the Health & Legal category and building a sophisticated multi-system solution for ProEdge Advisory.</p>
+  </div>
+  <div class="capstone-grid">
+    <div class="fade-up">
+      <ul class="capstone-rule-list">
+        <li class="capstone-rule"><span class="rule-num">01</span><div class="rule-text"><strong>Chose 1 Project Category</strong><span>Health & Legal Systems — directly aligned with ProEdge Advisory's practice areas</span></div></li>
+        <li class="capstone-rule"><span class="rule-num">02</span><div class="rule-text"><strong>Built Full Automation Systems</strong><span>Three end-to-end systems, each with trigger → AI reasoning → actionable output</span></div></li>
+        <li class="capstone-rule"><span class="rule-num">03</span><div class="rule-text"><strong>AI Decision-Making Included</strong><span>Claude AI powers every analysis — real reasoning, not basic if/then logic</span></div></li>
+        <li class="capstone-rule"><span class="rule-num">04</span><div class="rule-text"><strong>Trigger + AI + Action</strong><span>Each system: form trigger → Claude AI → structured report output</span></div></li>
+        <li class="capstone-rule"><span class="rule-num">05</span><div class="rule-text"><strong>Live Demo Ready</strong><span>All three systems run live with an Anthropic API key — demo-ready</span></div></li>
+      </ul>
+    </div>
+    <div class="tech-stack fade-up">
+      <div class="tech-title">Technology Stack</div>
+      <div class="tech-item"><div class="tech-dot"></div><div class="tech-name">Claude AI (Anthropic)</div><div class="tech-desc">AI reasoning engine</div></div>
+      <div class="tech-item"><div class="tech-dot"></div><div class="tech-name">Anthropic Messages API</div><div class="tech-desc">claude-sonnet-4</div></div>
+      <div class="tech-item"><div class="tech-dot"></div><div class="tech-name">HTML / CSS / JavaScript</div><div class="tech-desc">Frontend systems</div></div>
+      <div class="tech-item"><div class="tech-dot"></div><div class="tech-name">GitHub Pages</div><div class="tech-desc">Live deployment</div></div>
+      <div class="tech-item"><div class="tech-dot"></div><div class="tech-name">ProEdge Advisory</div><div class="tech-desc">Real-world application</div></div>
+      <div style="margin-top:1.5rem;padding:1rem;background:var(--navy);border-left:2px solid var(--gold);">
+        <div class="tech-title" style="color:var(--gold-light);margin-bottom:0.5rem;">Business Problem Solved</div>
+        <p style="font-size:0.8rem;color:rgba(247,244,239,0.65);line-height:1.7;">Legal advisory firms spend hours on client intake, compliance reviews, and document analysis. These AI systems automate that process — reducing turnaround from days to minutes while maintaining professional-grade output.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="fade-up">
+    <div class="section-label" style="justify-content:center;color:var(--gold);">Contact</div>
+    <h2 class="section-heading">Let's Build<br><em>Something That Works</em></h2>
+    <p class="section-sub">Whether you need legal advisory, business structuring, compliance strategy, or AI automation for your firm — ProEdge Advisory is ready.</p>
+  </div>
+  <div class="contact-grid fade-up">
+    <div class="contact-item">
+      <div class="contact-item-label">Organisation</div>
+      <div class="contact-item-val">ProEdge Advisory</div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-item-label">Cohort</div>
+      <div class="contact-item-val">10Alytics · March 2026</div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-item-label">Specialisation</div>
+      <div class="contact-item-val">Health & Legal AI Systems</div>
+    </div>
+  </div>
+  <div class="footer-rule"></div>
+  <p class="footer-text">© 2026 Glory Akosa-Obidike · ProEdge Advisory · All Rights Reserved</p>
+</section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal" id="modalBox">
+    <div class="modal-header">
+      <div class="modal-title" id="modalTitle">System</div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+// ── API KEY ──
+let API_KEY = '';
+function saveApiKey() {
+  const v = document.getElementById('globalApiKey').value.trim();
+  if (!v.startsWith('sk-')) { alert('Please enter a valid Anthropic API key (starts with sk-ant-)'); return; }
+  API_KEY = v;
+  document.getElementById('apiStatus').textContent = '● Connected — AI systems active';
+  document.getElementById('apiStatus').className = 'api-status connected';
+}
+
+// ── ANIMATIONS ──
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// ── MODAL ──
+function openModal(sys) {
+  document.getElementById('modalOverlay').classList.add('open');
+  const titles = { s1: '🏛️ AI Compliance Intelligence System', s2: '⚖️ Case Intake & Contract Intelligence Hub', s3: '🚀 ProEdge AI Command Center' };
+  document.getElementById('modalTitle').textContent = titles[sys];
+  if (sys === 's1') buildS1();
+  else if (sys === 's2') buildS2();
+  else if (sys === 's3') buildS3();
+}
+function closeModal() { document.getElementById('modalOverlay').classList.remove('open'); }
+function closeModalOutside(e) { if (e.target === document.getElementById('modalOverlay')) closeModal(); }
+
+async function callAI(prompt) {
+  if (!API_KEY) { throw new Error('No API key. Please enter your Anthropic API key above and click Activate.'); }
+  const resp = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
+    body: JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 1000, messages: [{ role: 'user', content: prompt }] })
+  });
+  const data = await resp.json();
+  if (data.error) throw new Error(data.error.message);
+  const text = data.content.map(i => i.text||'').join('').replace(/```json|```/g,'').trim();
+  return JSON.parse(text);
+}
+
+// ── SYSTEM 1 ──
+function buildS1() {
+  document.getElementById('modalBody').innerHTML = `
+    <div id="s1-form">
+      <div class="m-grid2">
+        <div class="m-field"><label>Business Name</label><input id="s1-name" placeholder="e.g. Nova Telecoms Ltd"/></div>
+        <div class="m-field"><label>Sector</label>
+          <select id="s1-sector"><option value="">Select...</option><option>Oil & Gas</option><option>Telecommunications</option><option>Real Estate</option><option>Financial Services</option><option>Technology</option><option>Healthcare</option><option>Non-Profit</option><option>Manufacturing</option></select>
+        </div>
+      </div>
+      <div class="m-grid2">
+        <div class="m-field"><label>Business Type</label>
+          <select id="s1-type"><option value="">Select...</option><option>Startup</option><option>SME</option><option>NGO</option><option>Corporation</option></select>
+        </div>
+        <div class="m-field"><label>Jurisdiction</label><input id="s1-country" placeholder="e.g. Nigeria"/></div>
+      </div>
+      <div class="m-field"><label>Compliance Areas</label>
+        <div class="m-check-group" id="s1-areas">
+          <label class="m-pill on"><input type="checkbox" checked value="Corporate Governance" onchange="toggleMPill(this)">Corporate Governance</label>
+          <label class="m-pill on"><input type="checkbox" checked value="Employment Law" onchange="toggleMPill(this)">Employment Law</label>
+          <label class="m-pill"><input type="checkbox" value="Tax & Financial" onchange="toggleMPill(this)">Tax & Financial</label>
+          <label class="m-pill"><input type="checkbox" value="Data Protection" onchange="toggleMPill(this)">Data Protection</label>
+          <label class="m-pill"><input type="checkbox" value="Regulatory Licensing" onchange="toggleMPill(this)">Licensing</label>
+          <label class="m-pill"><input type="checkbox" value="Anti-Corruption" onchange="toggleMPill(this)">Anti-Corruption</label>
+        </div>
+      </div>
+      <div class="m-grid2">
+        <div class="m-field"><label>Policy Status</label>
+          <select id="s1-policy"><option value="">Select...</option><option>Fully documented</option><option>Partially documented</option><option>No formal policy</option></select>
+        </div>
+        <div class="m-field"><label>Last Review</label>
+          <select id="s1-review"><option value="">Select...</option><option>Within 6 months</option><option>6–12 months ago</option><option>Over 1 year ago</option><option>Never conducted</option></select>
+        </div>
+      </div>
+      <div class="m-field"><label>Known Concerns</label><textarea id="s1-concerns" placeholder="Describe any compliance gaps or concerns..."></textarea></div>
+      <button class="m-btn" onclick="runS1()">Run AI Compliance Audit →</button>
+    </div>
+    <div id="s1-loading" style="display:none;"><div class="m-spinner-wrap"><div class="m-spinner"></div><div class="m-load-msg" id="s1-msg">Analysing compliance posture...</div></div></div>
+    <div id="s1-result" style="display:none;"></div>`;
+}
+
+function toggleMPill(cb) { cb.closest('.m-pill').classList.toggle('on', cb.checked); }
+
+async function runS1() {
+  if (!API_KEY) { alert('Please enter your Anthropic API key in the "Activate AI Systems" box above first.'); closeModal(); return; }
+  const name = document.getElementById('s1-name').value.trim();
+  const sector = document.getElementById('s1-sector').value;
+  const type = document.getElementById('s1-type').value;
+  const country = document.getElementById('s1-country').value.trim();
+  const areas = [...document.querySelectorAll('#s1-areas input:checked')].map(c=>c.value);
+  const policy = document.getElementById('s1-policy').value;
+  const review = document.getElementById('s1-review').value;
+  const concerns = document.getElementById('s1-concerns').value.trim();
+  if (!name || !sector || !type || !country || !policy || !review) { alert('Please complete all required fields.'); return; }
+  document.getElementById('s1-form').style.display='none';
+  document.getElementById('s1-loading').style.display='block';
+  const msgs=['Analysing compliance posture...','Cross-referencing frameworks...','Scoring risk exposure...','Drafting recommendations...'];
+  let i=0; const t=setInterval(()=>{i=(i+1)%msgs.length;document.getElementById('s1-msg').textContent=msgs[i];},1800);
+  try {
+    const r = await callAI(`You are ProEdge AI — a legal compliance intelligence system built by ProEdge Advisory, founded by Glory Akosa-Obidike, Corporate & Commercial Lawyer.
+Audit: ${name} | ${type} | ${sector} | ${country}
+Compliance areas: ${areas.join(', ')} | Policy: ${policy} | Last review: ${review} | Concerns: ${concerns||'None'}
+Return JSON ONLY: {"riskScore":<0-100>,"riskLevel":"<High|Medium|Low>","complianceScore":<0-100>,"criticalGaps":<number>,"executiveSummary":"<2-3 sentences>","topRisks":["<r1>","<r2>","<r3>","<r4>"],"governanceRecommendations":["<rec1>","<rec2>","<rec3>","<rec4>"],"quickWins":["<qw1>","<qw2>","<qw3>"],"regulatoryFrameworks":["<f1>","<f2>","<f3>"]}`);
+    clearInterval(t);
+    document.getElementById('s1-loading').style.display='none';
+    const rc = r.riskLevel==='High'?'m-risk-high':r.riskLevel==='Medium'?'m-risk-medium':'m-risk-low';
+    document.getElementById('s1-result').innerHTML=`
+      <div class="m-risk-banner ${rc}">RISK LEVEL: ${r.riskLevel} — Score ${r.riskScore}/100</div>
+      <div class="m-kpi-grid">
+        <div class="m-kpi"><div class="m-kpi-num">${r.riskScore}</div><div class="m-kpi-lbl">Risk Score</div></div>
+        <div class="m-kpi"><div class="m-kpi-num">${r.complianceScore}%</div><div class="m-kpi-lbl">Compliance</div></div>
+        <div class="m-kpi"><div class="m-kpi-num">${r.criticalGaps}</div><div class="m-kpi-lbl">Critical Gaps</div></div>
+      </div>
+      <div style="margin-bottom:1rem;"><div class="m-section-label">Executive Summary</div><p class="m-result-text">${r.executiveSummary}</p></div>
+      <div style="margin-bottom:1rem;"><div class="m-section-label">Top Risks</div><ul class="m-result-list">${r.topRisks.map(x=>`<li style="color:#A32D2D">${x}</li>`).join('')}</ul></div>
+      <div style="margin-bottom:1rem;"><div class="m-section-label">Governance Recommendations</div><ul class="m-result-list">${r.governanceRecommendations.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      <div style="margin-bottom:1rem;"><div class="m-section-label">Quick Wins (30 Days)</div><ul class="m-result-list">${r.quickWins.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+      <div><div class="m-section-label">Regulatory Frameworks</div>${r.regulatoryFrameworks.map(x=>`<span class="m-tag m-tag-gold">${x}</span>`).join('')}</div>
+      <div class="m-btn-row" style="margin-top:1rem;">
+        <button class="m-btn m-btn-secondary" onclick="buildS1()">New Audit</button>
+        <button class="m-btn" onclick="closeModal()">Close</button>
+      </div>`;
+    document.getElementById('s1-result').style.display='block';
+  } catch(e) { clearInterval(t); document.getElementById('s1-loading').style.display='none'; document.getElementById('s1-form').style.display='block'; alert(e.message||'Analysis failed. Please try again.'); }
+}
+
+// ── SYSTEM 2 ──
+function buildS2() {
+  document.getElementById('modalBody').innerHTML = `
+    <div class="m-tabs">
+      <button class="m-tab active" onclick="switchMTab('intake',this)">Client Intake</button>
+      <button class="m-tab" onclick="switchMTab('contract',this)">Contract Analyser</button>
+      <button class="m-tab" onclick="switchMTab('brief',this)">Brief Generator</button>
+    </div>
+    <div id="mtab-intake">
+      <div class="m-grid2">
+        <div class="m-field"><label>Client Name</label><input id="s2-cname" placeholder="e.g. Emeka Okonkwo"/></div>
+        <div class="m-field"><label>Matter Type</label>
+          <select id="s2-matter"><option value="">Select...</option><option>Corporate Governance</option><option>Contract Dispute</option><option>Employment & HR</option><option>Regulatory Compliance</option><option>Business Structuring</option><option>Debt Recovery</option><option>General Advisory</option></select>
+        </div>
+      </div>
+      <div class="m-grid2">
+        <div class="m-field"><label>Client Type</label>
+          <select id="s2-ctype"><option value="">Select...</option><option>Individual</option><option>Startup</option><option>SME</option><option>Corporation</option><option>NGO</option></select>
+        </div>
+        <div class="m-field"><label>Urgency</label>
+          <select id="s2-urgency"><option value="">Select...</option><option>Critical (24hrs)</option><option>High (1 week)</option><option>Medium (1 month)</option><option>Low (flexible)</option></select>
+        </div>
+      </div>
+      <div class="m-field"><label>Case Description</label><textarea id="s2-cdesc" placeholder="Describe the legal issue and what the client needs..."></textarea></div>
+      <button class="m-btn" onclick="runS2Intake()">Qualify & Route Case →</button>
+      <div id="s2-intake-loading" style="display:none;"><div class="m-spinner-wrap"><div class="m-spinner"></div><div class="m-load-msg" id="s2-intake-msg">Analysing case...</div></div></div>
+      <div id="s2-intake-result" style="display:none;"></div>
+    </div>
+    <div id="mtab-contract" style="display:none;">
+      <div class="m-grid2">
+        <div class="m-field"><label>Contract Type</label>
+          <select id="s2-ctype2"><option value="">Select...</option><option>Service Agreement</option><option>Employment Contract</option><option>NDA</option><option>Partnership Agreement</option><option>Shareholders Agreement</option><option>Vendor Agreement</option><option>MOU</option></select>
+        </div>
+        <div class="m-field"><label>Governing Law</label><input id="s2-govlaw" placeholder="e.g. Nigerian Law"/></div>
+      </div>
+      <div class="m-field"><label>Contract Text / Key Clauses</label><textarea id="s2-ctext" style="font-family:var(--font-mono);font-size:12px;min-height:100px;" placeholder="Paste contract text or clauses here..."></textarea></div>
+      <button class="m-btn" onclick="runS2Contract()">Analyse Contract →</button>
+      <div id="s2-contract-loading" style="display:none;"><div class="m-spinner-wrap"><div class="m-spinner"></div><div class="m-load-msg" id="s2-contract-msg">Extracting intelligence...</div></div></div>
+      <div id="s2-contract-result" style="display:none;"></div>
+    </div>
+    <div id="mtab-brief" style="display:none;">
+      <div class="m-grid2">
+        <div class="m-field"><label>Brief Type</label>
+          <select id="s2-btype"><option value="">Select...</option><option>Client Advisory Letter</option><option>Demand Letter</option><option>Legal Opinion</option><option>Compliance Brief</option><option>HR Policy Advisory</option></select>
+        </div>
+        <div class="m-field"><label>Tone</label>
+          <select id="s2-btone"><option value="">Select...</option><option>Formal & Authoritative</option><option>Professional & Advisory</option><option>Concise & Practical</option></select>
+        </div>
+      </div>
+      <div class="m-field"><label>Subject Matter</label><input id="s2-bsubject" placeholder="e.g. Employment contract dispute"/></div>
+      <div class="m-field"><label>Key Facts & Context</label><textarea id="s2-bfacts" placeholder="Key facts, parties involved, relevant dates..."></textarea></div>
+      <button class="m-btn" onclick="runS2Brief()">Generate Legal Brief →</button>
+      <div id="s2-brief-loading" style="display:none;"><div class="m-spinner-wrap"><div class="m-spinner"></div><div class="m-load-msg" id="s2-brief-msg">Drafting brief...</div></div></div>
+      <div id="s2-brief-result" style="display:none;"></div>
+    </div>`;
+}
+
+function switchMTab(name, btn) {
+  ['intake','contract','brief'].forEach(t => { document.getElementById('mtab-'+t).style.display = t===name?'block':'none'; });
+  document.querySelectorAll('.m-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+async function runS2Intake() {
+  if (!API_KEY) { alert('Please enter your Anthropic API key first.'); closeModal(); return; }
+  const name=document.getElementById('s2-cname').value.trim(), matter=document.getElementById('s2-matter').value, ctype=document.getElementById('s2-ctype').value, urgency=document.getElementById('s2-urgency').value, desc=document.getElementById('s2-cdesc').value.trim();
+  if (!name||!matter||!ctype||!urgency||!desc) { alert('Please complete all fields.'); return; }
+  document.getElementById('s2-intake-loading').style.display='block';
+  const msgs=['Qualifying case...','Scoring complexity...','Routing to service area...','Generating brief...'];
+  let i=0; const t=setInterval(()=>{i=(i+1)%msgs.length;document.getElementById('s2-intake-msg').textContent=msgs[i];},1800);
+  try {
+    const r=await callAI(`ProEdge Advisory (Glory Akosa-Obidike) case intake. Client: ${name}|${ctype}|${matter}|${urgency}. Description: ${desc}
+Return JSON ONLY: {"qualificationScore":<0-100>,"complexityLevel":"<Low|Medium|High|Very High>","caseStrength":"<Weak|Moderate|Strong>","priorityTag":"<Urgent|High|Standard|Low>","executiveSummary":"<2 sentences>","keyLegalIssues":["<i1>","<i2>","<i3>"],"recommendedActions":["<a1>","<a2>","<a3>"],"documentsNeeded":["<d1>","<d2>","<d3>"],"timelineEstimate":"<e.g. 4-6 weeks>","serviceArea":"<primary service>"}`);
+    clearInterval(t); document.getElementById('s2-intake-loading').style.display='none';
+    document.getElementById('s2-intake-result').innerHTML=`
+      <div class="m-result-box">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;"><div style="font-size:14px;font-weight:500;">${name} — Case Brief</div><span class="m-tag ${r.priorityTag==='Urgent'?'m-tag-red':r.priorityTag==='High'?'m-tag-amber':'m-tag-navy'}">${r.priorityTag}</span></div>
+        <div class="m-kpi-grid"><div class="m-kpi"><div class="m-kpi-num">${r.qualificationScore}</div><div class="m-kpi-lbl">Score</div></div><div class="m-kpi"><div class="m-kpi-num" style="font-size:1.1rem;">${r.complexityLevel}</div><div class="m-kpi-lbl">Complexity</div></div><div class="m-kpi"><div class="m-kpi-num" style="font-size:1.1rem;">${r.caseStrength}</div><div class="m-kpi-lbl">Strength</div></div></div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Summary</div><p class="m-result-text">${r.executiveSummary}</p></div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Service Area</div><span class="m-tag m-tag-gold">${r.serviceArea}</span></div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Key Issues</div><ul class="m-result-list">${r.keyLegalIssues.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Documents Needed</div>${r.documentsNeeded.map(x=>`<span class="m-tag m-tag-navy">${x}</span>`).join('')}</div>
+        <div><div class="m-section-label">Timeline</div><span style="font-size:13px;">${r.timelineEstimate}</span></div>
+      </div>`;
+    document.getElementById('s2-intake-result').style.display='block';
+  } catch(e) { clearInterval(t); document.getElementById('s2-intake-loading').style.display='none'; alert(e.message||'Failed. Please try again.'); }
+}
+
+async function runS2Contract() {
+  if (!API_KEY) { alert('Please enter your Anthropic API key first.'); closeModal(); return; }
+  const type=document.getElementById('s2-ctype2').value, law=document.getElementById('s2-govlaw').value.trim(), text=document.getElementById('s2-ctext').value.trim();
+  if (!type||!text) { alert('Please select contract type and paste contract text.'); return; }
+  document.getElementById('s2-contract-loading').style.display='block';
+  const msgs=['Extracting clauses...','Scoring exposure...','Identifying gaps...','Finalising...'];
+  let i=0; const t=setInterval(()=>{i=(i+1)%msgs.length;document.getElementById('s2-contract-msg').textContent=msgs[i];},1800);
+  try {
+    const r=await callAI(`ProEdge AI Contract Intelligence (Glory Akosa-Obidike). Contract: ${type}|${law||'Not specified'}. Text: ${text}
+Return JSON ONLY: {"riskScore":<0-100>,"riskLevel":"<Low|Medium|High|Critical>","overallVerdict":"<one sentence>","redFlags":["<f1>","<f2>","<f3>"],"missingClauses":["<c1>","<c2>","<c3>"],"strongClauses":["<s1>","<s2>"],"renegotiationPoints":["<p1>","<p2>","<p3>"],"executiveSummary":"<2 sentences>"}`);
+    clearInterval(t); document.getElementById('s2-contract-loading').style.display='none';
+    const rc=r.riskLevel==='High'||r.riskLevel==='Critical'?'m-risk-high':r.riskLevel==='Medium'?'m-risk-medium':'m-risk-low';
+    document.getElementById('s2-contract-result').innerHTML=`
+      <div class="m-result-box">
+        <div class="m-risk-banner ${rc}">${type} — ${r.riskLevel} RISK (${r.riskScore}/100)</div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Assessment</div><p class="m-result-text">${r.executiveSummary}</p></div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Verdict</div><p style="font-style:italic;font-size:13px;color:#6B5F52;">"${r.overallVerdict}"</p></div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Red Flags</div><ul class="m-result-list">${r.redFlags.map(x=>`<li style="color:#A32D2D">${x}</li>`).join('')}</ul></div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Missing Clauses</div>${r.missingClauses.map(x=>`<span class="m-tag m-tag-amber">${x}</span>`).join('')}</div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Renegotiation Points</div><ul class="m-result-list">${r.renegotiationPoints.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+        <div><div class="m-section-label">Strong Clauses</div>${r.strongClauses.map(x=>`<span class="m-tag m-tag-green">${x}</span>`).join('')}</div>
+      </div>`;
+    document.getElementById('s2-contract-result').style.display='block';
+  } catch(e) { clearInterval(t); document.getElementById('s2-contract-loading').style.display='none'; alert(e.message||'Failed. Please try again.'); }
+}
+
+async function runS2Brief() {
+  if (!API_KEY) { alert('Please enter your Anthropic API key first.'); closeModal(); return; }
+  const type=document.getElementById('s2-btype').value, tone=document.getElementById('s2-btone').value, subject=document.getElementById('s2-bsubject').value.trim(), facts=document.getElementById('s2-bfacts').value.trim();
+  if (!type||!tone||!subject||!facts) { alert('Please complete all fields.'); return; }
+  document.getElementById('s2-brief-loading').style.display='block';
+  const msgs=['Drafting brief...','Structuring arguments...','Applying tone...','Finalising...'];
+  let i=0; const t=setInterval(()=>{i=(i+1)%msgs.length;document.getElementById('s2-brief-msg').textContent=msgs[i];},1800);
+  try {
+    const r=await callAI(`ProEdge Advisory legal brief (Glory Akosa-Obidike, Corporate & Commercial Lawyer). Type: ${type}|${tone}. Subject: ${subject}. Facts: ${facts}
+Return JSON ONLY: {"briefTitle":"<title>","referenceNumber":"<PA/2026/XXX>","introduction":"<1-2 para>","legalPosition":"<2-3 sentences>","recommendations":["<r1>","<r2>","<r3>"],"conclusion":"<1-2 sentences>","nextSteps":["<s1>","<s2>","<s3>"]}`);
+    clearInterval(t); document.getElementById('s2-brief-loading').style.display='none';
+    document.getElementById('s2-brief-result').innerHTML=`
+      <div class="m-result-box" style="border-left:2px solid var(--gold);">
+        <div style="text-align:center;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid rgba(15,30,60,0.08);">
+          <div style="font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">ProEdge Advisory — Confidential</div>
+          <div style="font-size:15px;font-weight:500;color:var(--navy);">${r.briefTitle}</div>
+          <div style="font-size:11px;color:var(--warm-gray);">Ref: ${r.referenceNumber} · ${new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'})}</div>
+        </div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Introduction</div><p class="m-result-text">${r.introduction}</p></div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Legal Position</div><p class="m-result-text">${r.legalPosition}</p></div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Recommendations</div><ul class="m-result-list">${r.recommendations.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Conclusion</div><p class="m-result-text">${r.conclusion}</p></div>
+        <div><div class="m-section-label">Next Steps</div><ul class="m-result-list">${r.nextSteps.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+        <div style="margin-top:1rem;padding-top:.75rem;border-top:1px solid rgba(15,30,60,0.08);font-size:11px;color:var(--warm-gray);text-align:center;">Glory Akosa-Obidike · Principal Advisor · ProEdge Advisory</div>
+      </div>`;
+    document.getElementById('s2-brief-result').style.display='block';
+  } catch(e) { clearInterval(t); document.getElementById('s2-brief-loading').style.display='none'; alert(e.message||'Failed. Please try again.'); }
+}
+
+// ── SYSTEM 3 ──
+const s3State = {};
+function buildS3() {
+  document.getElementById('modalBody').innerHTML = `
+    <p style="font-size:13px;line-height:1.7;color:var(--warm-gray);margin-bottom:1.25rem;">The full 5-module engagement pipeline. Complete each step in order — the final Advisory Report synthesises all modules into one definitive document.</p>
+    <div class="m-tabs">
+      <button class="m-tab active" id="s3-tab-onboard" onclick="s3SwitchTab('onboard',this)">1 · Onboard</button>
+      <button class="m-tab" id="s3-tab-audit" onclick="s3SwitchTab('audit',this)">2 · Audit</button>
+      <button class="m-tab" id="s3-tab-contract" onclick="s3SwitchTab('contract',this)">3 · Contract</button>
+      <button class="m-tab" id="s3-tab-hr" onclick="s3SwitchTab('hr',this)">4 · HR</button>
+      <button class="m-tab" id="s3-tab-report" onclick="s3SwitchTab('report',this)">5 · Report</button>
+    </div>
+    <!-- ONBOARD -->
+    <div id="s3-panel-onboard">
+      <div class="m-grid2">
+        <div class="m-field"><label>Business Name</label><input id="s3-bname" placeholder="e.g. Nova Telecoms Ltd"/></div>
+        <div class="m-field"><label>Sector</label><select id="s3-bsector"><option value="">Select...</option><option>Oil & Gas</option><option>Telecommunications</option><option>Real Estate</option><option>Financial Services</option><option>Technology</option><option>Healthcare</option><option>Non-Profit</option></select></div>
+      </div>
+      <div class="m-grid2">
+        <div class="m-field"><label>Type</label><select id="s3-btype"><option value="">Select...</option><option>Startup</option><option>SME</option><option>Corporation</option><option>NGO</option></select></div>
+        <div class="m-field"><label>Jurisdiction</label><input id="s3-bcountry" placeholder="e.g. Nigeria"/></div>
+      </div>
+      <div class="m-field"><label>Business Description & Objectives</label><textarea id="s3-bdesc" placeholder="What does the business do and what are its key legal/compliance objectives?"></textarea></div>
+      <button class="m-btn" onclick="runS3Onboard()">Onboard Client →</button>
+      <div id="s3-onboard-load" style="display:none;"><div class="m-spinner-wrap"><div class="m-spinner"></div><div class="m-load-msg">Onboarding client...</div></div></div>
+      <div id="s3-onboard-result" style="display:none;"></div>
+    </div>
+    <!-- AUDIT -->
+    <div id="s3-panel-audit" style="display:none;">
+      <div class="m-field"><label>Compliance Areas</label>
+        <div class="m-check-group" id="s3-audit-areas">
+          <label class="m-pill on"><input type="checkbox" checked value="Corporate Governance" onchange="toggleMPill(this)">Corporate Governance</label>
+          <label class="m-pill on"><input type="checkbox" checked value="Employment Law" onchange="toggleMPill(this)">Employment Law</label>
+          <label class="m-pill"><input type="checkbox" value="Tax & Financial" onchange="toggleMPill(this)">Tax & Financial</label>
+          <label class="m-pill"><input type="checkbox" value="Data Protection" onchange="toggleMPill(this)">Data Protection</label>
+          <label class="m-pill"><input type="checkbox" value="Anti-Corruption" onchange="toggleMPill(this)">Anti-Corruption</label>
+        </div>
+      </div>
+      <div class="m-grid2">
+        <div class="m-field"><label>Policy Status</label><select id="s3-policy"><option value="">Select...</option><option>Fully documented</option><option>Partially documented</option><option>No formal policy</option></select></div>
+        <div class="m-field"><label>Last Review</label><select id="s3-review"><option value="">Select...</option><option>Within 6 months</option><option>6–12 months ago</option><option>Over 1 year ago</option><option>Never conducted</option></select></div>
+      </div>
+      <div class="m-field"><label>Concerns</label><textarea id="s3-concerns" placeholder="Known compliance gaps..."></textarea></div>
+      <button class="m-btn" onclick="runS3Audit()">Run Compliance Audit →</button>
+      <div id="s3-audit-load" style="display:none;"><div class="m-spinner-wrap"><div class="m-spinner"></div><div class="m-load-msg">Running audit...</div></div></div>
+      <div id="s3-audit-result" style="display:none;"></div>
+    </div>
+    <!-- CONTRACT -->
+    <div id="s3-panel-contract" style="display:none;">
+      <div class="m-grid2">
+        <div class="m-field"><label>Contract Type</label><select id="s3-ctype"><option value="">Select...</option><option>Service Agreement</option><option>Employment Contract</option><option>NDA</option><option>Partnership Agreement</option><option>Vendor Agreement</option><option>MOU</option></select></div>
+        <div class="m-field"><label>Client Position</label><select id="s3-cpos"><option value="">Select...</option><option>Service Provider</option><option>Service Recipient</option><option>Equal Partner</option><option>Employer</option><option>Employee</option></select></div>
+      </div>
+      <div class="m-field"><label>Contract Text / Key Clauses</label><textarea id="s3-ctext" style="font-family:var(--font-mono);font-size:12px;min-height:90px;" placeholder="Paste contract text or clauses..."></textarea></div>
+      <button class="m-btn" onclick="runS3Contract()">Analyse Contract →</button>
+      <div id="s3-contract-load" style="display:none;"><div class="m-spinner-wrap"><div class="m-spinner"></div><div class="m-load-msg">Analysing contract...</div></div></div>
+      <div id="s3-contract-result" style="display:none;"></div>
+    </div>
+    <!-- HR -->
+    <div id="s3-panel-hr" style="display:none;">
+      <div class="m-field"><label>Policies Currently in Place</label>
+        <div class="m-check-group" id="s3-hr-policies">
+          <label class="m-pill"><input type="checkbox" value="Employment Contracts" onchange="toggleMPill(this)">Employment Contracts</label>
+          <label class="m-pill"><input type="checkbox" value="Leave Policy" onchange="toggleMPill(this)">Leave Policy</label>
+          <label class="m-pill"><input type="checkbox" value="Disciplinary Procedure" onchange="toggleMPill(this)">Disciplinary</label>
+          <label class="m-pill"><input type="checkbox" value="Anti-Harassment" onchange="toggleMPill(this)">Anti-Harassment</label>
+          <label class="m-pill"><input type="checkbox" value="Performance Management" onchange="toggleMPill(this)">Performance Mgmt</label>
+          <label class="m-pill"><input type="checkbox" value="Health & Safety" onchange="toggleMPill(this)">Health & Safety</label>
+        </div>
+      </div>
+      <div class="m-grid2">
+        <div class="m-field"><label>Workforce Type</label><select id="s3-workforce"><option value="">Select...</option><option>Fully employed</option><option>Mix of employed & contractors</option><option>Mostly contractors</option><option>Remote-first</option></select></div>
+        <div class="m-field"><label>Recent HR Incidents</label><select id="s3-incidents"><option value="">Select...</option><option>None</option><option>Termination disputes</option><option>Harassment complaints</option><option>Salary disputes</option></select></div>
+      </div>
+      <div class="m-field"><label>HR Concerns</label><textarea id="s3-hrconcerns" placeholder="Current HR challenges or disputes..."></textarea></div>
+      <button class="m-btn" onclick="runS3HR()">Run HR Check →</button>
+      <div id="s3-hr-load" style="display:none;"><div class="m-spinner-wrap"><div class="m-spinner"></div><div class="m-load-msg">Analysing HR posture...</div></div></div>
+      <div id="s3-hr-result" style="display:none;"></div>
+    </div>
+    <!-- REPORT -->
+    <div id="s3-panel-report" style="display:none;">
+      <div id="s3-report-gate" style="text-align:center;padding:2rem;">
+        <div style="font-size:2rem;margin-bottom:1rem;">📋</div>
+        <div style="font-size:14px;font-weight:500;color:var(--navy);margin-bottom:.5rem;">Full Advisory Report</div>
+        <div style="font-size:12px;color:var(--warm-gray);margin-bottom:1.5rem;">Complete all 4 modules to generate your comprehensive report.</div>
+        <div id="s3-gate-status" style="margin-bottom:1rem;text-align:left;max-width:280px;margin:0 auto 1rem;"></div>
+        <button class="m-btn" id="s3-report-btn" onclick="runS3Report()" disabled style="max-width:260px;margin:0 auto;opacity:0.4;cursor:not-allowed;">Generate Full Report →</button>
+      </div>
+      <div id="s3-report-load" style="display:none;"><div class="m-spinner-wrap"><div class="m-spinner"></div><div class="m-load-msg" id="s3-report-msg">Synthesising all modules...</div></div></div>
+      <div id="s3-report-result" style="display:none;"></div>
+    </div>`;
+  s3UpdateGate();
+}
+
+function s3SwitchTab(name, btn) {
+  ['onboard','audit','contract','hr','report'].forEach(t=>{ document.getElementById('s3-panel-'+t).style.display=t===name?'block':'none'; });
+  document.querySelectorAll('.m-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  if (name==='report') s3UpdateGate();
+}
+
+function s3UpdateGate() {
+  const done={onboard:!!s3State.onboard,audit:!!s3State.audit,contract:!!s3State.contract,hr:!!s3State.hr};
+  const labels={onboard:'Client Onboarding',audit:'Compliance Audit',contract:'Contract Analysis',hr:'HR Policy Check'};
+  const el=document.getElementById('s3-gate-status');
+  if(!el)return;
+  el.innerHTML=Object.entries(done).map(([k,v])=>`<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;"><div style="width:7px;height:7px;border-radius:50%;background:${v?'#639922':'#ccc'}"></div><span style="font-size:12px;color:${v?'var(--ink)':'var(--warm-gray)'};">${labels[k]}</span><span style="margin-left:auto;font-size:10px;font-family:var(--font-mono);color:${v?'#3B6D11':'var(--warm-gray)'};">${v?'✓ Done':'Pending'}</span></div>`).join('');
+  const allDone=Object.values(done).every(Boolean);
+  const btn=document.getElementById('s3-report-btn');
+  if(btn){btn.disabled=!allDone;btn.style.opacity=allDone?'1':'0.4';btn.style.cursor=allDone?'pointer':'not-allowed';}
+}
+
+async function runS3Onboard() {
+  if (!API_KEY) { alert('Please enter your Anthropic API key first.'); closeModal(); return; }
+  const name=document.getElementById('s3-bname').value.trim(),sector=document.getElementById('s3-bsector').value,type=document.getElementById('s3-btype').value,country=document.getElementById('s3-bcountry').value.trim(),desc=document.getElementById('s3-bdesc').value.trim();
+  if(!name||!sector||!type||!country||!desc){alert('Please complete all fields.');return;}
+  document.getElementById('s3-onboard-load').style.display='block';
+  try {
+    const r=await callAI(`ProEdge Advisory onboarding (Glory Akosa-Obidike). Client: ${name}|${type}|${sector}|${country}. Info: ${desc}
+Return JSON ONLY: {"engagementId":"<PA-2026-XXX>","clientTier":"<Standard|Premium|Strategic>","riskProfile":"<Low|Medium|High|Critical>","executiveSummary":"<2 sentences>","keyPriorities":["<p1>","<p2>","<p3>"],"identifiedRisks":["<r1>","<r2>","<r3>"],"engagementTimeline":"<e.g. 6-8 weeks>"}`);
+    s3State.onboard={name,sector,type,country,...r};
+    document.getElementById('s3-onboard-load').style.display='none';
+    document.getElementById('s3-onboard-result').innerHTML=`
+      <div class="m-result-box">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.75rem;"><div><div style="font-size:14px;font-weight:500;">${name}</div><div style="font-size:11px;color:var(--warm-gray);">Ref: ${r.engagementId}</div></div><span class="m-tag ${r.clientTier==='Strategic'?'m-tag-gold':r.clientTier==='Premium'?'m-tag-navy':'m-tag-amber'}">${r.clientTier}</span></div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Summary</div><p class="m-result-text">${r.executiveSummary}</p></div>
+        <div class="m-grid2"><div><div class="m-section-label">Key Priorities</div><ul class="m-result-list">${r.keyPriorities.map(x=>`<li>${x}</li>`).join('')}</ul></div><div><div class="m-section-label">Identified Risks</div><ul class="m-result-list">${r.identifiedRisks.map(x=>`<li style="color:#A32D2D">${x}</li>`).join('')}</ul></div></div>
+        <div style="margin-top:.75rem;font-size:12px;color:var(--warm-gray);">Timeline: <strong>${r.engagementTimeline}</strong></div>
+      </div>
+      <button class="m-btn" onclick="s3SwitchTab('audit',document.getElementById('s3-tab-audit'))">Continue to Compliance Audit →</button>`;
+    document.getElementById('s3-onboard-result').style.display='block';
+  } catch(e){document.getElementById('s3-onboard-load').style.display='none';alert(e.message||'Failed.');}
+}
+
+async function runS3Audit(){
+  if(!API_KEY){alert('Please enter your Anthropic API key first.');closeModal();return;}
+  const areas=[...document.querySelectorAll('#s3-audit-areas input:checked')].map(c=>c.value);
+  const policy=document.getElementById('s3-policy').value,review=document.getElementById('s3-review').value,concerns=document.getElementById('s3-concerns').value.trim();
+  if(!policy||!review){alert('Please complete all fields.');return;}
+  document.getElementById('s3-audit-load').style.display='block';
+  try{
+    const r=await callAI(`ProEdge compliance audit. ${s3State.onboard?`Client: ${s3State.onboard.name}, ${s3State.onboard.sector}`:''} Areas: ${areas.join(', ')}|${policy}|${review}|${concerns||'None'}
+Return JSON ONLY: {"overallRiskScore":<0-100>,"riskLevel":"<Low|Medium|High|Critical>","complianceScore":<0-100>,"criticalGaps":<number>,"executiveSummary":"<2 sentences>","topRisks":["<r1>","<r2>","<r3>"],"thirtyDayPlan":["<t1>","<t2>","<t3>"],"regulatoryFrameworks":["<f1>","<f2>","<f3>"]}`);
+    s3State.audit=r;document.getElementById('s3-audit-load').style.display='none';
+    const rc=r.riskLevel==='High'||r.riskLevel==='Critical'?'m-risk-high':r.riskLevel==='Medium'?'m-risk-medium':'m-risk-low';
+    document.getElementById('s3-audit-result').innerHTML=`<div class="m-result-box"><div class="m-risk-banner ${rc}">COMPLIANCE: ${r.riskLevel} RISK — Score ${r.overallRiskScore}/100 · ${r.criticalGaps} Critical Gaps</div><div style="margin-bottom:.75rem;"><div class="m-section-label">Summary</div><p class="m-result-text">${r.executiveSummary}</p></div><div style="margin-bottom:.75rem;"><div class="m-section-label">Top Risks</div><ul class="m-result-list">${r.topRisks.map(x=>`<li style="color:#A32D2D">${x}</li>`).join('')}</ul></div><div style="margin-bottom:.75rem;"><div class="m-section-label">30-Day Plan</div><ul class="m-result-list">${r.thirtyDayPlan.map(x=>`<li>${x}</li>`).join('')}</ul></div><div><div class="m-section-label">Frameworks</div>${r.regulatoryFrameworks.map(x=>`<span class="m-tag m-tag-gold">${x}</span>`).join('')}</div></div>
+    <button class="m-btn" onclick="s3SwitchTab('contract',document.getElementById('s3-tab-contract'))">Continue to Contract Analysis →</button>`;
+    document.getElementById('s3-audit-result').style.display='block';
+  }catch(e){document.getElementById('s3-audit-load').style.display='none';alert(e.message||'Failed.');}
+}
+
+async function runS3Contract(){
+  if(!API_KEY){alert('Please enter your Anthropic API key first.');closeModal();return;}
+  const type=document.getElementById('s3-ctype').value,pos=document.getElementById('s3-cpos').value,text=document.getElementById('s3-ctext').value.trim();
+  if(!type||!pos||!text){alert('Please complete all fields.');return;}
+  document.getElementById('s3-contract-load').style.display='block';
+  try{
+    const r=await callAI(`ProEdge contract analysis. ${type}|${pos}. Text: ${text}
+Return JSON ONLY: {"riskScore":<0-100>,"riskLevel":"<Low|Medium|High|Critical>","balanceOfPower":"<Favours Client|Balanced|Favours Other Party>","redFlags":["<f1>","<f2>","<f3>"],"missingClauses":["<c1>","<c2>","<c3>"],"renegotiationPoints":["<p1>","<p2>","<p3>"],"executiveSummary":"<2 sentences>"}`);
+    s3State.contract=r;document.getElementById('s3-contract-load').style.display='none';
+    const rc=r.riskLevel==='High'||r.riskLevel==='Critical'?'m-risk-high':r.riskLevel==='Medium'?'m-risk-medium':'m-risk-low';
+    document.getElementById('s3-contract-result').innerHTML=`<div class="m-result-box"><div class="m-risk-banner ${rc}">CONTRACT: ${r.riskLevel} RISK (${r.riskScore}/100) — ${r.balanceOfPower}</div><div style="margin-bottom:.75rem;"><p class="m-result-text">${r.executiveSummary}</p></div><div style="margin-bottom:.75rem;"><div class="m-section-label">Red Flags</div><ul class="m-result-list">${r.redFlags.map(x=>`<li style="color:#A32D2D">${x}</li>`).join('')}</ul></div><div style="margin-bottom:.75rem;"><div class="m-section-label">Missing Clauses</div>${r.missingClauses.map(x=>`<span class="m-tag m-tag-amber">${x}</span>`).join('')}</div><div><div class="m-section-label">Renegotiation Points</div><ul class="m-result-list">${r.renegotiationPoints.map(x=>`<li>${x}</li>`).join('')}</ul></div></div>
+    <button class="m-btn" onclick="s3SwitchTab('hr',document.getElementById('s3-tab-hr'))">Continue to HR Check →</button>`;
+    document.getElementById('s3-contract-result').style.display='block';
+  }catch(e){document.getElementById('s3-contract-load').style.display='none';alert(e.message||'Failed.');}
+}
+
+async function runS3HR(){
+  if(!API_KEY){alert('Please enter your Anthropic API key first.');closeModal();return;}
+  const policies=[...document.querySelectorAll('#s3-hr-policies input:checked')].map(c=>c.value);
+  const workforce=document.getElementById('s3-workforce').value,incidents=document.getElementById('s3-incidents').value,concerns=document.getElementById('s3-hrconcerns').value.trim();
+  if(!workforce||!incidents){alert('Please complete all fields.');return;}
+  document.getElementById('s3-hr-load').style.display='block';
+  try{
+    const r=await callAI(`ProEdge HR policy check (Glory Akosa-Obidike, Certified HR Specialist). ${s3State.onboard?`Client: ${s3State.onboard.name}`:''}. Policies: ${policies.join(',')||'None'}|${workforce}|${incidents}|${concerns||'None'}
+Return JSON ONLY: {"hrHealthScore":<0-100>,"riskLevel":"<Low|Medium|High|Critical>","criticalGaps":<number>,"executiveSummary":"<2 sentences>","missingPolicies":["<p1>","<p2>","<p3>","<p4>"],"labourLawRisks":["<r1>","<r2>","<r3>"],"immediateActions":["<a1>","<a2>","<a3>"],"applicableLaws":["<l1>","<l2>","<l3>"]}`);
+    s3State.hr=r;document.getElementById('s3-hr-load').style.display='none';
+    const rc=r.riskLevel==='High'||r.riskLevel==='Critical'?'m-risk-high':r.riskLevel==='Medium'?'m-risk-medium':'m-risk-low';
+    document.getElementById('s3-hr-result').innerHTML=`<div class="m-result-box"><div class="m-risk-banner ${rc}">HR: ${r.riskLevel} RISK — Health Score ${r.hrHealthScore}/100 · ${r.criticalGaps} Critical Gaps</div><div style="margin-bottom:.75rem;"><p class="m-result-text">${r.executiveSummary}</p></div><div class="m-grid2"><div><div class="m-section-label">Missing Policies</div>${r.missingPolicies.map(x=>`<span class="m-tag m-tag-amber">${x}</span>`).join('')}</div><div><div class="m-section-label">Labour Law Risks</div><ul class="m-result-list">${r.labourLawRisks.map(x=>`<li style="color:#A32D2D">${x}</li>`).join('')}</ul></div></div><div style="margin-top:.75rem;"><div class="m-section-label">Applicable Laws</div>${r.applicableLaws.map(x=>`<span class="m-tag m-tag-gold">${x}</span>`).join('')}</div></div>
+    <button class="m-btn" onclick="s3SwitchTab('report',document.getElementById('s3-tab-report'))">Generate Advisory Report →</button>`;
+    document.getElementById('s3-hr-result').style.display='block';
+    s3UpdateGate();
+  }catch(e){document.getElementById('s3-hr-load').style.display='none';alert(e.message||'Failed.');}
+}
+
+async function runS3Report(){
+  if(!API_KEY){alert('Please enter your Anthropic API key first.');closeModal();return;}
+  if(!s3State.onboard||!s3State.audit||!s3State.contract||!s3State.hr){alert('Please complete all modules first.');return;}
+  document.getElementById('s3-report-gate').style.display='none';
+  document.getElementById('s3-report-load').style.display='block';
+  const msgs=['Synthesising all modules...','Integrating compliance findings...','Consolidating contract insights...','Merging HR analysis...','Drafting strategic report...'];
+  let i=0;const t=setInterval(()=>{i=(i+1)%msgs.length;document.getElementById('s3-report-msg').textContent=msgs[i];},1800);
+  try{
+    const r=await callAI(`ProEdge Advisory comprehensive report (Glory Akosa-Obidike — Corporate & Commercial Lawyer, Certified HR Specialist).
+Client: ${s3State.onboard.name}|${s3State.onboard.sector}|${s3State.onboard.country}
+Compliance: Risk ${s3State.audit.overallRiskScore}/100, ${s3State.audit.riskLevel}, ${s3State.audit.criticalGaps} gaps
+Contract: Risk ${s3State.contract.riskScore}/100, ${s3State.contract.riskLevel}, ${s3State.contract.balanceOfPower}
+HR: Health ${s3State.hr.hrHealthScore}/100, ${s3State.hr.riskLevel}, ${s3State.hr.criticalGaps} gaps
+Return JSON ONLY: {"reportTitle":"<title>","reportRef":"<PA-RPT-2026-XXX>","overallHealthScore":<0-100>,"overallRiskLevel":"<Low|Medium|High|Critical>","executiveSummary":"<3-4 sentences>","keyFindings":["<f1>","<f2>","<f3>","<f4>","<f5>"],"strategicRecommendations":["<r1>","<r2>","<r3>","<r4>","<r5>"],"priorityActions30Days":["<a1>","<a2>","<a3>"],"priorityActions90Days":["<a1>","<a2>","<a3>"],"growthOpportunities":["<o1>","<o2>","<o3>"],"advisorStatement":"<2 sentences from Glory Akosa-Obidike>"}`);
+    clearInterval(t);document.getElementById('s3-report-load').style.display='none';
+    const scoreColor=r.overallHealthScore>60?'#3B6D11':r.overallHealthScore>30?'#854F0B':'#A32D2D';
+    document.getElementById('s3-report-result').innerHTML=`
+      <div class="m-result-box" style="border:1px solid var(--gold);border-left:3px solid var(--gold);">
+        <div style="text-align:center;margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid rgba(15,30,60,0.08);">
+          <div style="font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">ProEdge Advisory — Confidential Advisory Report</div>
+          <div style="font-size:16px;font-weight:500;color:var(--navy);margin-bottom:3px;">${r.reportTitle}</div>
+          <div style="font-size:11px;color:var(--warm-gray);">Ref: ${r.reportRef} · ${new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'})}</div>
+        </div>
+        <div class="m-kpi-grid" style="grid-template-columns:repeat(4,1fr);">
+          <div class="m-kpi"><div class="m-kpi-num" style="color:${scoreColor}">${r.overallHealthScore}</div><div class="m-kpi-lbl">Health Score</div></div>
+          <div class="m-kpi"><div class="m-kpi-num" style="color:#A32D2D">${s3State.audit.overallRiskScore}</div><div class="m-kpi-lbl">Compliance</div></div>
+          <div class="m-kpi"><div class="m-kpi-num" style="color:#854F0B">${s3State.contract.riskScore}</div><div class="m-kpi-lbl">Contract</div></div>
+          <div class="m-kpi"><div class="m-kpi-num" style="color:${s3State.hr.hrHealthScore>60?'#3B6D11':'#854F0B'}">${s3State.hr.hrHealthScore}</div><div class="m-kpi-lbl">HR Health</div></div>
+        </div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Executive Summary</div><p class="m-result-text">${r.executiveSummary}</p></div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Key Findings</div><ul class="m-result-list">${r.keyFindings.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Strategic Recommendations</div><ul class="m-result-list">${r.strategicRecommendations.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+        <div class="m-grid2" style="margin-bottom:.75rem;">
+          <div><div class="m-section-label">30-Day Actions</div><ul class="m-result-list">${r.priorityActions30Days.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+          <div><div class="m-section-label">90-Day Actions</div><ul class="m-result-list">${r.priorityActions90Days.map(x=>`<li>${x}</li>`).join('')}</ul></div>
+        </div>
+        <div style="margin-bottom:.75rem;"><div class="m-section-label">Growth Opportunities</div><ul class="m-result-list">${r.growthOpportunities.map(x=>`<li style="color:#3B6D11">${x}</li>`).join('')}</ul></div>
+        <div style="background:var(--navy);padding:1rem;border-left:2px solid var(--gold);">
+          <div class="m-section-label" style="color:var(--gold-light);margin-bottom:6px;">Advisor's Statement</div>
+          <p style="font-size:13px;color:rgba(247,244,239,0.8);line-height:1.7;font-style:italic;">"${r.advisorStatement}"</p>
+          <div style="font-size:10px;color:rgba(184,146,42,0.7);margin-top:8px;font-family:var(--font-mono);">Glory Akosa-Obidike · Principal Advisor · ProEdge Advisory</div>
+        </div>
+      </div>`;
+    document.getElementById('s3-report-result').style.display='block';
+  }catch(e){clearInterval(t);document.getElementById('s3-report-load').style.display='none';document.getElementById('s3-report-gate').style.display='block';alert(e.message||'Failed.');}
+}
+</script>
+</body>
+</html>
